@@ -1,0 +1,33 @@
+
+begin
+  write('N = ');
+  readln(N);
+  randomize;
+  writeln;
+  writeln('Первая матрица:');
+  for i := 1 to N do begin
+    for j := 1 to N do begin
+      a[i, j] := -N + random(2 * N + 1);
+      write(a[i, j]:4)
+    end;
+    writeln
+  end;
+  writeln;
+  writeln('Вторая матрица:');
+  for i := 1 to N do begin
+    maxi := -N;
+    for j := 1 to N do begin
+      b[i, j] := -N + random(2 * N + 1);
+      write(b[i, j]:4);
+      if maxi < b[i, j] then maxi := b[i, j]
+    end;
+    writeln;
+    for j := 1 to N do c[i, j] := maxi * a[i, j]
+  end;
+  writeln;
+  writeln('Третья матрица:');
+  for i := 1 to N do begin
+    for j := 1 to N do write(c[i, j]:5);
+    writeln
+  end
+end.
