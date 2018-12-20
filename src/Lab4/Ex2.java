@@ -1,8 +1,8 @@
-package Lab5;
+package Lab4;
 
-        import java.util.Scanner;
+import java.util.Scanner;
 
-public class Lab5 {
+public class Ex2{
     public static void main(String[] args) {
         int x;
         int y;
@@ -18,10 +18,10 @@ public class Lab5 {
         for(y = 0; y<x; y++)
             if(array[y] == 0)
                 count++;
-        if(count >=3)
+            if(count >=3)
             System.out.println(count);
 
-        else
-            System.out.println("Нет 3 нулей подряд. Есть только "+count);
+            else
+                System.out.println("Нет 3 нулей подряд. Есть только "+count);
     }
 }

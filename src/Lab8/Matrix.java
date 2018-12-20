@@ -1,10 +1,13 @@
 package Lab8;
 
 
-
 public class Matrix {
     private final int[][] matrix;
     public int length;
+    public int getColumsNum;
+    public int getRowsNum;
+    public int getElement;
+    public int getLength;
 
     public Matrix(int rows, int cols) {
         if (rows < 1 || cols < 1) {
@@ -26,7 +29,9 @@ public class Matrix {
     int getRowsNum() {
         return matrix.length;
     }
-
+    int getLength(){
+        return length;
+    }
     int getColumnsNum() {
         return matrix[0].length;
     }
@@ -62,7 +67,7 @@ public class Matrix {
 
         return result;
     }
-
+    
 }
 
 

@@ -8,6 +8,7 @@ public class MatrixRunner {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         int x,y;
+
         Scanner in = new Scanner(System.in);
         System.out.print("Enter i: ");
         x = in.nextInt();
@@ -20,7 +21,9 @@ public class MatrixRunner {
         Matrix second = new Matrix(x,y);
         MatrixUtil.fill(second);
         MatrixUtil.print(second);
-
+        System.out.println(first.getLength());
+        System.out.println(first.getColumnsNum());
+        System.out.println(first.getRowsNum());
         Matrix mul = first.multiply(second);
 
         MatrixUtil.print(mul);
